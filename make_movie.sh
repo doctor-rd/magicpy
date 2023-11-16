@@ -5,11 +5,11 @@ PROCS=4
 
 # Use glmagic.py to make all of the depth maps
 echo "Generating depth maps..."
-python glmagic.py -p $PREFIX -e $EXT
+python2.7 glmagic.py -p $PREFIX -e $EXT
 
 # Convert each depth map into a stereogram with magicpy.py (in parallel with xargs)
 echo "Converting depth maps to stereograms ($PROCS threads)..."
-ls -1 $PREFIX*.$EXT | xargs -I {} -n1 -P$PROCS python magicpy.py {} -o magic-{}
+ls -1 $PREFIX*.$EXT | xargs -I {} -n1 -P$PROCS python2.7 magicpy.py {} -o magic-{}
 
 # Use ImageMagick to roll up all of the stereograms into an animated GIF
 echo "Generating animated GIF..."

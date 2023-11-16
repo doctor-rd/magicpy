@@ -13,10 +13,10 @@ If you string together multiple stereograms, you can make [cool "MagicEye" movie
 Examples
 --------
     # Use default settings (1/8 sized pattern)
-    $ python magicpy.py shark.png -o magic-shark.png
+    $ python2.7 magicpy.py shark.png -o magic-shark.png
 
     # Make random pattern 1/10 of the depthmap size
-    $ python magicpy.py -p 10 shark.png -o magic-shark.png
+    $ python2.7 magicpy.py -p 10 shark.png -o magic-shark.png
 
 ![shark.png](https://raw.github.com/synesthesiam/magicpy/master/shark.png)
 ![magic-shark.png](https://raw.github.com/synesthesiam/magicpy/master/magic-shark.png)
@@ -34,7 +34,7 @@ You can make your own movies by modifying the **render** function inside glmagic
 Examples
 --------
     # Make depthmap frames with the GLUT teapot
-    $ python glmagic.py
+    $ python2.7 glmagic.py
 
     # Generate an animated GIF of the teapot
     $ ./make-movie.sh
